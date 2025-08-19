@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/csphc-campaign/static/css/main.492661e3.css",
+    "main.js": "/csphc-campaign/static/js/main.df88a6a4.js",
+    "service-worker.js": "/csphc-campaign/service-worker.js",
+    "index.html": "/csphc-campaign/index.html",
+    "main.492661e3.css.map": "/csphc-campaign/static/css/main.492661e3.css.map",
+    "main.df88a6a4.js.map": "/csphc-campaign/static/js/main.df88a6a4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.492661e3.css",
+    "static/js/main.df88a6a4.js"
+  ]
+}
