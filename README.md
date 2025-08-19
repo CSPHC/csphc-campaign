@@ -1,9 +1,17 @@
-<<<<<<< HEAD
-## Copilot Security Prompt Harvesting Campaign (CSPHC)
-This repository hosts the public-facing Single Page Application (SPA).
+# CSPHC Campaign SPA
 
-The SPA will be built and deployed via GitHub Actions.
-D3.js will be used for data visualizations. See /src/components/Visualizations.js for examples.
-=======
-# CSPHC-Launcher
->>>>>>> 4867d893e (first commit)
+This is the public-facing Single Page Application for the Copilot Security Prompt Harvesting Campaign.
+
+## Structure
+- `published_prompts.json`: Public, reviewed, and ranked prompts for display
+- React source code: To be added in `src/`
+
+## Getting Started
+1. Install dependencies: `npm install`
+2. Build: `npm run build`
+3. Deploy: See GitHub Actions workflow for automated deployment to GitHub Pages
+
+## Next Steps
+- Scaffold React app in `src/`
+- Implement prompt list and detail views
+- Integrate D3.js for data visualization

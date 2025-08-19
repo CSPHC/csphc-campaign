@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Copilot Security Prompt",
+  "description": "Schema for a GitHub Copilot security prompt submission, including metadata and assessment results.",
+  "type": "object",
+  "properties": {
+    "prompt_id": { "type": "string" },
+    "prompt_text": { "type": "string" },
+    "copilot_output": { "type": "string" },
+    "security_relevance": { "type": "string" },
+    "use_case_description": { "type": "string" },
+    "programming_language": { "type": "string" },
+    "github_copilot_version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "vscode_version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "submission_details": {
+      "type": "object",
+      "properties": {
+        "submitted_by": { "type": "string" },
+        "submission_date": { "type": "string", "format": "date-time" },
+        "source_repository": { "type": "string", "format": "uri" },
+        "context_code_snippet": { "type": "string" },
+        "copilot_chat_history_summary": { "type": "string" }
+      },
+      "required": ["submitted_by", "submission_date"]
+    },
+    "security_domain": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "mitre_attck_ttps": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^T\\d{4}(\\.\\d{3})?$" }
+    },
+    "keywords": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "review_status": { "type": "string" },
+    "reviewer_details": {
+      "type": "object",
+      "properties": {
+        "reviewed_by": { "type": "string" },
+        "review_date": { "type": "string", "format": "date-time" },
+        "review_comments": { "type": "string" }
+      }
+    },
+    "assessment_scores": {
+      "type": "object",
+      "properties": {
+        "effectiveness_score": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "accuracy_score": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "security_best_practices_score": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "clarity_score": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "overall_score": { "type": "number" }
+      }
+    },
+    "ranking": { "type": "integer" },
+    "published_details": {
+      "type": "object",
+      "properties": {
+        "is_published": { "type": "boolean", "default": false },
+        "published_date": { "type": "string", "format": "date-time" },
+        "generated_description": { "type": "string" },
+        "generated_usage_instructions": { "type": "string" }
+      }
+    }
+  },
+  "required": [
+    "prompt_id",
+    "prompt_text",
+    "copilot_output",
+    "security_relevance",
+    "use_case_description",
+    "programming_language",
+    "submission_details",
+    "security_domain",
+    "review_status"
+  ]
+}

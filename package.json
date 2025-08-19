@@ -1,9 +1,14 @@
 {
-  "name": "spa",
+  "name": "csphc-campaign-spa",
   "version": "0.1.0",
   "private": true,
+  "description": "Copilot Security Prompt Harvesting Campaign SPA",
+  "main": "src/index.js",
   "dependencies": {
+    "@testing-library/jest-dom": "^6.7.0",
+    "@testing-library/react": "^16.3.0",
     "cra-template-pwa": "2.0.0",
+    "d3": "^7.9.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-scripts": "5.0.1"
@@ -11,8 +16,13 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "jest --coverage",
+    "integration-test": "jest src/App.integration.test.js",
+    "d3-test": "jest src/D3Visualization.test.js",
+    "promptlist-test": "jest src/PromptList.test.js",
+    "schema-edge-test": "jest assessments/prompts/schema.edge.test.js",
+    "eject": "react-scripts eject",
+    "schema-test": "jest assessments/prompts/schema.test.js"
   },
   "eslintConfig": {
     "extends": [

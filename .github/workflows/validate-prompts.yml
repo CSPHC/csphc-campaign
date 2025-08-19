@@ -1,0 +1,25 @@
+name: Validate Prompt Submissions
+
+on:
+  pull_request:
+    paths:
+      - 'assessments/prompts/*.json'
+    types: [opened, synchronize]
+
+jobs:
+  validate-schema:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Ajv CLI
+        run: npm install -g ajv-cli
+      - name: Validate all prompt JSON files
+        run: |
+          for file in assessments/prompts/*.json; do
+            ajv validate -s assessments/prompts/schema.json -d "$file" || exit 1
+          done

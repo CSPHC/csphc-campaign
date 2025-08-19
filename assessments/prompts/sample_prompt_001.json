@@ -1,0 +1,40 @@
+{
+  "prompt_id": "sample-001",
+  "prompt_text": "Generate a Python function to sanitize SQL input.",
+  "copilot_output": "def sanitize_sql_input(input_str):\n    return input_str.replace(\"'\", \"''\")",
+  "security_relevance": "Prevents SQL Injection vulnerabilities.",
+  "use_case_description": "Used by a web developer to secure user-provided database queries.",
+  "programming_language": "Python",
+  "github_copilot_version": "1.10.2",
+  "vscode_version": "1.85.1",
+  "submission_details": {
+    "submitted_by": "octocat",
+    "submission_date": "2025-08-19T10:30:00Z",
+    "source_repository": "https://github.com/octocat/my-secure-app",
+    "context_code_snippet": "def process_user_input(data):\n    # Copilot prompt used here",
+    "copilot_chat_history_summary": "User asked for SQL sanitization, then refined for specific characters."
+  },
+  "security_domain": ["SOC", "Vulnerability Management"],
+  "mitre_attck_ttps": ["T1059.001"],
+  "keywords": ["sanitization", "input validation", "python security"],
+  "review_status": "approved",
+  "reviewer_details": {
+    "reviewed_by": "security-expert-1",
+    "review_date": "2025-08-19T14:00:00Z",
+    "review_comments": "Excellent prompt, clear output, but needs more robust sanitization for edge cases."
+  },
+  "assessment_scores": {
+    "effectiveness_score": 4,
+    "accuracy_score": 3,
+    "security_best_practices_score": 5,
+    "clarity_score": 4,
+    "overall_score": 4.2
+  },
+  "ranking": 1,
+  "published_details": {
+    "is_published": false,
+    "published_date": "2025-08-19T00:00:00Z",
+    "generated_description": "This prompt generates a Python function for basic SQL input sanitization, aiming to prevent common SQL injection attacks.",
+    "generated_usage_instructions": "1. Copy the generated function into your Python application. 2. Pass user input strings to this function before constructing SQL queries. 3. Review the output for completeness."
+  }
+}

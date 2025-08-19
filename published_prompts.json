@@ -1,0 +1,26 @@
+[
+  {
+    "prompt_id": "",
+    "prompt_text": "",
+    "copilot_output": "",
+    "security_relevance": "",
+    "use_case_description": "",
+    "programming_language": "",
+    "github_copilot_version": "",
+    "vscode_version": "",
+    "submission_details": {
+      "submitted_by": "",
+      "submission_date": ""
+    },
+    "security_domain": [],
+    "mitre_attck_ttps": [],
+    "keywords": [],
+    "review_status": "",
+    "reviewer_details": {},
+    "assessment_scores": {},
+    "ranking": null,
+    "published_details": {
+      "is_published": false
+    }
+  }
+]
